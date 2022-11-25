@@ -1,0 +1,189 @@
+<!-- Build a Survey Form
+Objective: Build an app that is functionally similar to https://survey-form.freecodecamp.rocks
+
+User Stories:
+
+You should have a page title in an h1 element with an id of title ✅
+You should have a short explanation in a p element with an id of description ✅
+You should have a form element with an id of survey-form ✅
+Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text ✅
+Inside the form element, you are required to enter your email in an input field that has an id of email ✅
+If you enter an email that is not formatted correctly, you will see an HTML5 validation error ✅
+Inside the form, you can enter a number in an input field that has an id of number ✅
+The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser). ✅
+If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error ✅
+For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label" ✅
+For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field ✅
+Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from ✅
+Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute ✅
+Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute ✅
+Inside the form element, you are presented with a textarea for additional comments ✅
+Inside the form element, you are presented with a button with id of submit to submit all the inputs ✅
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding! ✅
+
+Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS ✅ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developers Survey!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="background"></div>
+    <div id="content">
+      <header>
+        <h1 id="title">Developers Survey!</h1>
+        <p id="description">
+          <em>
+            Thank you for spending a little of your time trying to improve the
+            platform!
+          </em>
+        </p>
+      </header>
+
+      <main>
+        <form id="survey-form">
+          <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label id="number-label" for="number">Age</label>
+            <input
+              id="number"
+              name="number"
+              type="number"
+              min="1"
+              max="120"
+              placeholder="Enter your age"
+            />
+          </div>
+          <div class="form-group">
+            <label id="kind-label" for="dropdown"
+              >What kind of developer are you?</label
+            >
+            <select id="dropdown" name="dropdown" type="dropdown">
+              <option value="" selected disabled>Pick one</option>
+              <option value="fullstack">Fullstack</option>
+              <option value="frontend">Frontend</option>
+              <option value="backend">Backend</option>
+              <option value="mobile">Mobile</option>
+              <option value="desktop">Desktop</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Do you recommend learning to code with Freecodecamp?</label>
+            <label for="yes-radio"
+              ><input
+                type="radio"
+                name="bootcamp"
+                id="yes-radio"
+                value="yes"
+                checked
+              />Yes! 👍</label
+            >
+            <label for="no-radio"
+              ><input
+                type="radio"
+                name="bootcamp"
+                id="no-radio"
+                value="no"
+              />No! 👎</label
+            >
+            <label for="maybe-radio"
+              ><input
+                type="radio"
+                name="bootcamp"
+                id="maybe-radio"
+                value="maybe"
+              />Maybe 🤷</label
+            >
+          </div>
+          <div class="form-group">
+            <label>What technologies do you know?</label>
+            <label for="html-check"
+              ><input
+                type="checkbox"
+                name="technologies"
+                id="html-check"
+                value="html"
+              />HTML</label
+            >
+            <label for="css-check"
+              ><input
+                type="checkbox"
+                name="technologies"
+                id="css-check"
+                value="css"
+              />CSS</label
+            >
+            <label for="javascript-check"
+              ><input
+                type="checkbox"
+                name="technologies"
+                id="javascript-check"
+                value="javascript"
+              />Javascript</label
+            >
+            <label for="typescript-check"
+              ><input
+                type="checkbox"
+                name="technologies"
+                id="typescript-check"
+                value="typescript"
+              />Typescript</label
+            >
+            <label for="react-check"
+              ><input
+                type="checkbox"
+                name="technologies"
+                id="react-check"
+                value="react"
+              />React</label
+            >
+            <label for="nextjs-check"
+              ><input
+                type="checkbox"
+                name="technologies"
+                id="nextjs-check"
+                value="nextjs"
+              />Nextjs</label
+            >
+            <label for="reactnative-check"
+              ><input
+                type="checkbox"
+                name="technologies"
+                id="reactnative-check"
+                value="reactnative"
+              />React Native</label
+            >
+          </div>
+          <div class="form-group">
+            <label for="comments-text">Any comments or suggestions?</label>
+            <textarea name="comments" id="comments-text" rows="5"></textarea>
+          </div>
+          <button id="submit" type="submit">Submit</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
